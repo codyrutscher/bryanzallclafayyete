@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
-import { FaChartLine, FaRocket, FaTarget, FaBullseye } from "react-icons/fa";
+import { FaChartLine, FaRocket, FaCrosshairs, FaBullseye } from "react-icons/fa";
 
 export default function StrategyPage() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -12,7 +12,7 @@ export default function StrategyPage() {
   const features = [
     { icon: <FaChartLine />, title: "Market Analysis", description: "Deep dive into your market landscape" },
     { icon: <FaRocket />, title: "Growth Planning", description: "Scalable strategies for expansion" },
-    { icon: <FaTarget />, title: "Goal Setting", description: "Clear, measurable objectives" },
+    { icon: <FaCrosshairs />, title: "Goal Setting", description: "Clear, measurable objectives" },
     { icon: <FaBullseye />, title: "Execution Roadmap", description: "Step-by-step implementation plan" },
   ];
 
