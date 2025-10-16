@@ -153,7 +153,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
                 <p className="text-gray-600 mb-8">
-                  We're here to help and answer any questions you might have. We look forward to hearing from you!
+                  We&apos;re here to help and answer any questions you might have. We look forward to hearing from you!
                 </p>
               </div>
 

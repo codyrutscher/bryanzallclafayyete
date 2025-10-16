@@ -78,7 +78,7 @@ export default function ReviewsSection() {
                 <FaStar key={i} className="text-yellow-300 text-xl" />
               ))}
             </div>
-            <p className="text-xl italic mb-8 leading-relaxed">"{reviews[0].text}"</p>
+            <p className="text-xl italic mb-8 leading-relaxed">&ldquo;{reviews[0].text}&rdquo;</p>
             <div className="flex items-center">
               <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
                 {reviews[0].avatar}
@@ -113,7 +113,7 @@ export default function ReviewsSection() {
                   <FaStar key={i} className="text-yellow-400 text-lg" />
                 ))}
               </div>
-              <p className="text-gray-700 italic text-lg leading-relaxed">"{reviews[1].text}"</p>
+              <p className="text-gray-700 italic text-lg leading-relaxed">&ldquo;{reviews[1].text}&rdquo;</p>
             </div>
           </motion.div>
 
@@ -141,7 +141,7 @@ export default function ReviewsSection() {
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-700 italic">"{reviews[2].text}"</p>
+                <p className="text-gray-700 italic">&ldquo;{reviews[2].text}&rdquo;</p>
               </div>
             </div>
           </motion.div>
@@ -168,7 +168,7 @@ export default function ReviewsSection() {
                 <FaStar key={i} className="text-yellow-400 text-sm" />
               ))}
             </div>
-            <p className="text-gray-700 italic text-sm">"{reviews[3].text}&quot;</p>
+            <p className="text-gray-700 italic text-sm">&ldquo;{reviews[3].text}&rdquo;</p>
           </motion.div>
         </div>
 

@@ -55,10 +55,10 @@ export default function SupportPage() {
             >
               <h2 className="text-4xl font-bold mb-6">Always Here For You</h2>
               <p className="text-gray-600 mb-4">
-                Our commitment doesn't end at implementation. We provide ongoing support to ensure your long-term success.
+                Our commitment doesn&apos;t end at implementation. We provide ongoing support to ensure your long-term success.
               </p>
               <p className="text-gray-600 mb-6">
-                With proactive monitoring, regular check-ins, and immediate assistance when needed, you'll never face challenges alone.
+                With proactive monitoring, regular check-ins, and immediate assistance when needed, you&apos;ll never face challenges alone.
               </p>
               <Link
                 href="/booking"

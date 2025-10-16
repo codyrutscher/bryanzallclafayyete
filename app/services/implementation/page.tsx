@@ -46,7 +46,7 @@ export default function ImplementationPage() {
             >
               <h2 className="text-4xl font-bold mb-6">From Plan to Reality</h2>
               <p className="text-gray-600 mb-4">
-                We don't just create strategies—we bring them to life. Our implementation services ensure smooth execution from start to finish.
+                We don&apos;t just create strategies—we bring them to life. Our implementation services ensure smooth execution from start to finish.
               </p>
               <p className="text-gray-600 mb-6">
                 With our proven methodologies and experienced team, we minimize disruption while maximizing results.
