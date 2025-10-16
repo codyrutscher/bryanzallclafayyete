@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Elite Business Solutions - Professional Website
+
+A modern, dynamic Next.js website with animations, 3D elements, and comprehensive business features.
+
+## Features
+
+✅ **5+ Pages**: Home, About, Services (with 4 sub-pages), Gallery, Contact, Booking
+✅ **Floating Widget**: Call, Text, Chat, and WhatsApp integration
+✅ **Social Media Feed**: Instagram, Facebook, TikTok integration ready
+✅ **Booking/Scheduling Page**: Complete appointment booking system
+✅ **Customizable Contact Form**: Full-featured contact page
+✅ **Reviews Section**: Connected to Google Business Profile
+✅ **GBP Posts Section**: Display Google Business Profile updates
+✅ **CTAs on Every Section**: Strategic call-to-action buttons throughout
+✅ **3D Icons & Animations**: Framer Motion animations and interactive elements
+✅ **Dynamic Interactions**: Smooth transitions, hover effects, and scroll animations
+
+## Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **3D Graphics**: React Three Fiber & Drei
+- **Icons**: React Icons
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+### Installation
+
+```bash
+cd professional-business-site
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+### Deploy to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Push your code to GitHub
+2. Import the project in Vercel
+3. Deploy with one click
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Or use Vercel CLI:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm install -g vercel
+vercel
+```
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Update Content
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Company Info**: Edit `components/Footer.tsx` and contact pages
+- **Services**: Modify files in `app/services/`
+- **Colors**: Update `app/globals.css` for theme colors
+- **Social Links**: Update `components/Footer.tsx`
+
+### Connect Real Integrations
+
+- **WhatsApp**: Update phone number in `components/FloatingWidget.tsx`
+- **Social Feeds**: Integrate APIs in `components/SocialFeed.tsx`
+- **Google Business**: Connect GBP API in `components/GBPPosts.tsx`
+- **Reviews**: Integrate review platforms in `components/home/ReviewsSection.tsx`
+- **Booking**: Connect calendar service in `app/booking/page.tsx`
+
+## Project Structure
+
+```
+professional-business-site/
+├── app/
+│   ├── about/
+│   ├── booking/
+│   ├── contact/
+│   ├── gallery/
+│   ├── services/
+│   │   ├── consulting/
+│   │   ├── strategy/
+│   │   ├── implementation/
+│   │   └── support/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── home/
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── FloatingWidget.tsx
+│   ├── CTASection.tsx
+│   ├── SocialFeed.tsx
+│   └── GBPPosts.tsx
+└── public/
+```
+
+## Performance
+
+- Optimized images and assets
+- Code splitting with Next.js
+- Server-side rendering
+- Fast page loads
+
+## License
+
+MIT
