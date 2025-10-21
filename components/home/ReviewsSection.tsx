@@ -59,7 +59,7 @@ export default function ReviewsSection() {
             What Our <span className="text-gradient">Clients Say</span>
           </h2>
           <p className="text-xl text-gray-600">
-            Real feedback from businesses we've helped transform
+            Real feedback from businesses we&apos;ve helped transform
           </p>
         </motion.div>
 

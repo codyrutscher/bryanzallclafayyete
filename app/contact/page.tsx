@@ -14,10 +14,40 @@ export default function ContactPage() {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you! We'll be in touch soon.");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        alert("¡Gracias! Nos pondremos en contacto pronto. / Thank you! We'll be in touch soon.");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: "",
+          message: ""
+        });
+      } else {
+        alert("Hubo un error. Por favor llámenos al (337) 210-6956. / There was an error. Please call us at (337) 210-6956.");
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert("Hubo un error. Por favor llámenos al (337) 210-6956. / There was an error. Please call us at (337) 210-6956.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -38,8 +68,13 @@ export default function ContactPage() {
               Get In <span className="text-gradient">Touch</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your business? Let's start the conversation
+              Transform Spaces With Color - Family-owned painting services
             </p>
+            <div className="mt-8">
+              <a href="tel:3372106956" className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                📞 Call Now: (337) 210-6956
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -113,11 +148,15 @@ export default function ContactPage() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
-                    <option value="">Select a service</option>
-                    <option value="consulting">Business Consulting</option>
-                    <option value="strategy">Growth Strategy</option>
-                    <option value="implementation">Implementation</option>
-                    <option value="support">Ongoing Support</option>
+                    <option value="">Select a service / Seleccione un servicio</option>
+                    <option value="interior-painting">Interior Painting / Pintura Interior</option>
+                    <option value="exterior-painting">Exterior Painting / Pintura Exterior</option>
+                    <option value="commercial-painting">Commercial Painting / Pintura Comercial</option>
+                    <option value="staining">Staining Services / Servicios de Tinción</option>
+                    <option value="drywall-repair">Small Drywall Repair / Reparación de Paneles de Yeso</option>
+                    <option value="cleanup">Clean Up Services / Servicios de Limpieza</option>
+                    <option value="residential">Residential Painting / Pintura Residencial</option>
+                    <option value="other">Other / Otro</option>
                   </select>
                 </div>
 
@@ -136,9 +175,10 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 rounded-lg font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </motion.div>
@@ -163,8 +203,9 @@ export default function ContactPage() {
                     <FaPhone size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-gray-600">(555) 123-4567</p>
+                    <h3 className="font-semibold mb-1">Phone / Teléfono</h3>
+                    <a href="tel:3372106956" className="text-blue-600 hover:text-blue-800 font-semibold text-lg">(337) 210-6956</a>
+                    <p className="text-sm text-gray-500 mt-1">Click to call / Haga clic para llamar</p>
                   </div>
                 </div>
 
@@ -173,8 +214,8 @@ export default function ContactPage() {
                     <FaEnvelope size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-gray-600">info@elitebusiness.com</p>
+                    <h3 className="font-semibold mb-1">Email / Correo</h3>
+                    <a href="mailto:bryanzallc@outlook.com" className="text-gray-600 hover:text-blue-600 break-all">bryanzallc@outlook.com</a>
                   </div>
                 </div>
 
@@ -183,8 +224,9 @@ export default function ContactPage() {
                     <FaMapMarkerAlt size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Address</h3>
-                    <p className="text-gray-600">123 Business Street<br />Suite 100<br />City, State 12345</p>
+                    <h3 className="font-semibold mb-1">Service Area / Área de Servicio</h3>
+                    <p className="text-gray-600">Lafayette, LA & Surrounding Areas</p>
+                    <p className="text-sm text-gray-500">Abbeville, Breaux Bridge, Broussard, Carencro, Jonesville, Maurice, Milton, Opelousas, Scott</p>
                   </div>
                 </div>
 
@@ -193,11 +235,10 @@ export default function ContactPage() {
                     <FaClock size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Business Hours</h3>
+                    <h3 className="font-semibold mb-1">Business Hours / Horario</h3>
                     <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 6:00 PM<br />
-                      Saturday: 10:00 AM - 4:00 PM<br />
-                      Sunday: Closed
+                      7 Days a Week: 7:00 AM - 7:00 PM<br />
+                      7 Días a la Semana: 7:00 AM - 7:00 PM
                     </p>
                   </div>
                 </div>

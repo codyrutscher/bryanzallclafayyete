@@ -9,8 +9,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold text-gradient mb-4">Elite Business</h3>
-            <p className="text-gray-400">Transforming businesses with innovative solutions and exceptional service.</p>
+            <h3 className="text-2xl font-bold text-gradient mb-4">Bryanza LLC</h3>
+            <p className="text-gray-400">Transform Spaces With Color - Family-owned painting services serving Lafayette, LA and surrounding areas.</p>
           </div>
 
           <div>
@@ -26,9 +26,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Contact Info</h4>
             <ul className="space-y-2 text-gray-400">
-              <li className="flex items-center"><FaPhone className="mr-2" /> (555) 123-4567</li>
-              <li className="flex items-center"><FaEnvelope className="mr-2" /> info@elitebusiness.com</li>
-              <li className="flex items-center"><FaMapMarkerAlt className="mr-2" /> 123 Business St, City</li>
+              <li className="flex items-center"><FaPhone className="mr-2" /> <a href="tel:3372106956" className="hover:text-white transition">(337) 210-6956</a></li>
+              <li className="flex items-center"><FaEnvelope className="mr-2" /> <a href="mailto:bryanzallc@outlook.com" className="hover:text-white transition break-all">bryanzallc@outlook.com</a></li>
+              <li className="flex items-center"><FaMapMarkerAlt className="mr-2" /> Lafayette, LA</li>
             </ul>
           </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Elite Business Solutions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Bryanza LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>

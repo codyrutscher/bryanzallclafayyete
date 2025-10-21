@@ -15,22 +15,13 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <ServicesPreview />
-      <CTASection 
-        title="Ready to Transform Your Business?"
-        description="Let's discuss how we can help you achieve your goals"
-        buttonText="Get Started Today"
-        buttonLink="/contact"
-      />
       <ReviewsSection />
       <GalleryPreview />
-      <SocialFeed />
-      <GBPPosts />
       <CTASection 
-        title="Schedule Your Free Consultation"
-        description="Book a time that works for you"
-        buttonText="Book Now"
-        buttonLink="/booking"
-        variant="secondary"
+        title="Ready to Transform Your Space With Color?"
+        description="Family-owned painting services with competitive prices"
+        buttonText="Get Free Quote"
+        buttonLink="/contact"
       />
     </main>
   );

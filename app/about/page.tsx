@@ -30,7 +30,7 @@ export default function AboutPage() {
               About <span className="text-gradient">Elite Business</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're a team of passionate professionals dedicated to transforming businesses through innovative solutions and exceptional service
+              We&apos;re a team of passionate professionals dedicated to transforming businesses through innovative solutions and exceptional service
             </p>
           </motion.div>
         </div>

@@ -46,7 +46,7 @@ export default function ConsultingPage() {
             >
               <h2 className="text-4xl font-bold mb-6">Transform Your Business</h2>
               <p className="text-gray-600 mb-4">
-                Our consulting services provide you with the strategic insights and actionable plans needed to navigate today's complex business landscape.
+                Our consulting services provide you with the strategic insights and actionable plans needed to navigate today&apos;s complex business landscape.
               </p>
               <p className="text-gray-600 mb-6">
                 We work closely with your team to understand your unique challenges and opportunities, delivering customized solutions that drive real results.
